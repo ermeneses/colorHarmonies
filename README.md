@@ -1,6 +1,6 @@
 # color-harmonies
 
-[![npm version](https://badge.fury.io/js/color-harmonies.svg)](https://badge.fury.io/js/color-harmonies)
+[![npm version](https://badge.fury.io/js/colorharmonies.svg)](https://badge.fury.io/js/colorharmonies)
 
 The `color-harmonies` package provides a JavaScript function to generate color harmonies based on a given color. It calculates complementary, analogous, and triadic colors to create visually pleasing color combinations. This package is useful for web developers, designers, and anyone working with color schemes in their projects.
 
