@@ -1,6 +1,6 @@
 {
   "name": "colorharmonies",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The color-harmonies package provides a JavaScript function to generate color harmonies based on a given color. It calculates complementary, analogous, and triadic colors to create visually pleasing color combinations. This package is useful for web developers, designers, and anyone working with color schemes in their projects.",
   "main": "index.js",
   "scripts": {

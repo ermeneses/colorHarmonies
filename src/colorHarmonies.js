@@ -73,6 +73,23 @@ function hslToHex(h, s, l) {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
+// Función para calcular un color complementario
+function getComplementaryColor(hexColor) {
+  // Convertir el color hexadecimal a RGB
+  let rgbColor = hexToRgb(hexColor);
+
+  // Convertir RGB a HSL
+  let hslColor = rgbToHsl(rgbColor.r, rgbColor.g, rgbColor.b);
+
+  // Calcular el matiz complementario
+  let complementaryHue = (hslColor.h + 180) % 360;
+
+  // Convertir el matiz complementario de HSL a hexadecimal
+  let hexComplementary = hslToHex(complementaryHue, hslColor.s, hslColor.l);
+
+  return hexComplementary;
+}
+
 // Función principal para obtener armonías de color
 function getColorHarmonies(hexColor) {
   // Convertir el color hexadecimal a RGB
@@ -88,6 +105,9 @@ function getColorHarmonies(hexColor) {
   let triadico1 = hslToHex((hslColor.h + 120) % 360, hslColor.s, hslColor.l);
   let triadico2 = hslToHex((hslColor.h + 240) % 360, hslColor.s, hslColor.l);
 
+  // Calcular un color complementario que se considera bien combinado con el color original
+  let goodLooking = getComplementaryColor(hexColor);
+
   // Retornar los colores calculados
   return {
     original: hexColor,
@@ -96,6 +116,7 @@ function getColorHarmonies(hexColor) {
     analogo2: analogo2,
     triadico1: triadico1,
     triadico2: triadico2,
+    goodLooking: goodLooking, // Nuevo color complementario bien combinado
   };
 }
 
