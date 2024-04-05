@@ -1,3 +1,3 @@
-const { getColorHarmonies } = require("./src/colorHarmonies");
+const { getColorHarmonies } = require("../src/colorHarmonies");
 
 module.exports = { getColorHarmonies };
